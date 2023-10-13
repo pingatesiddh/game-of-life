@@ -9,10 +9,8 @@ pipeline {
     stages {
         stage('checkout') {
             steps {
-		sh '''
-           git clone https://github.com/pingatesiddh/game-of-life.git
-	   cd /home/ec2-user/game-of-life
-		'''		
+		sh ' git clone https://github.com/pingatesiddh/game-of-life.git'
+	
             }
         }
 		stage('build') {
