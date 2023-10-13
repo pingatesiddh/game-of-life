@@ -11,7 +11,6 @@ pipeline {
             steps {
 		sh '''
             git clone https://github.com/pingatesiddh/game-of-life.git
-	   cd game-of-life
 		'''		
             }
         }
@@ -19,7 +18,7 @@ pipeline {
             steps {
                 
             sh '''
-		cd /home/ec2-user/gameoflife-web
+		cd /home/ec2-user/
 		mvn clean install
 		''' 
 
