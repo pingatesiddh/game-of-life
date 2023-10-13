@@ -19,7 +19,7 @@ pipeline {
             steps {
                 
             sh '''
-		cd /home/ec2-user/game-of-life
+		cd /home/ec2-user/gameoflife-web
 		mvn clean install
 		''' 
 
@@ -27,7 +27,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-            sh ' cp game-of-life/gameoflife-web/target/gameoflife.war  /mnt/apache-tomcat-9.0.80/webapps ' 
+            sh ' cp gameoflife-web/target/gameoflife.war  /mnt/apache-tomcat-9.0.80/webapps ' 
 			
             }
         }		
